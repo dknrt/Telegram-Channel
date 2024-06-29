@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Romberg</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=DynaPuff&family=Manrope&family=Pacifico&family=Truculenta:opsz,wght@12..72,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <h1 class="title"><span>Real</span><span>Romberg</span></h1>
+      <div class="container-icon">
+        <div class="block-item">
+          <img
+            src="./images/romberg.jpg"
+            alt="romberg"
+            width="300"
+            height="300"
+          />
+        </div>
+        <button class="btn --content">Our content</button>
+        <button class="btn --button">Promotion</button>
+        <button class="btn --contacts">Our contacts</button>
+      </div>
+      <div class="our-content">
+        <h2 class="title-content">Our content</h2>
+        <div class="content-block">
+          <img src="./images/tatto.jpg" alt="tattoo" height="400" width="300" />
+          <img src="./images/chess.jpg" alt="замок" height="400" width="300" />
+          <img
+            src="./images/замок.jpg"
+            alt="замок"
+            height="400"
+            width="300"
+            class="img"
+          />
+        </div>
+      </div>
+      <div class="promotion">
+        <h2 class="promotion-video">Our Promotion</h2>
+        <div class="promotion-video-block">
+          <video width="300" height="500" controls>
+            <source src="./images/romberg_v.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="our-links">
+        <h2 class="contacts">Our contacts</h2>
+        <div class="links-block">
+          <p class="text">Телефон: +380 63 293 18 75</p>
+          <p class="text txt">
+            Instagram:
+            <a
+              href="https://www.instagram.com/r._.romberg?igsh=NTc4MTIwNjQ2YQ=="
+              target="_blank"
+              >r._.romberg</a
+            >
+          </p>
+          <p class="text txt">
+            Telegram:
+            <a href="https://t.me/R03berg" target="_blank">༺Ř𝖔𝖒ăń༻</a>
+          </p>
+          <p class="text txt">
+            Channel's telegram:
+            <a href="https://t.me/+tzUITv5cSCM0Njcy" target="_blank"
+              >Real Romberg</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // alert("Наработки. Осталось сделать мобильную версию");
+      document.addEventListener("DOMContentLoaded", function () {
+        const icon = document.querySelector(".container-icon");
+        setTimeout(() => {
+          icon.classList.add("show");
+          icon.style.opacity = "1";
+          icon.style.transform = "translateY(60px)";
+          const opacityAnimation = icon.animate(
+            [{ opacity: 0 }, { opacity: 1 }],
+            { duration: 3000, easing: "ease-in-out" }
+          );
+          const translateYAnimation = icon.animate(
+            [
+              { transform: "translateY(400px)" },
+              { transform: "translateY(0)" },
+            ],
+            { duration: 3000, easing: "ease-in-out" }
+          );
+          opacityAnimation.play();
+          translateYAnimation.play();
+        }, 3000);
+      });
+
+      const buttonContent = document.querySelector(".--content");
+      const buttonPromotion = document.querySelector(".--button");
+      const buttonContacts = document.querySelector(".--contacts");
+      const ourContent = document.querySelector(".our-content");
+      const promotion = document.querySelector(".promotion");
+      const contacts = document.querySelector(".our-links");
+
+      buttonContent.addEventListener("click", function () {
+        if (ourContent.style.display === "none") {
+          ourContent.style.display = "grid";
+        } else {
+          ourContent.style.display = "none";
+        }
+      });
+
+      buttonPromotion.addEventListener("click", function () {
+        if (promotion.style.display === "none") {
+          promotion.style.display = "grid";
+        } else {
+          promotion.style.display = "none";
+        }
+      });
+
+      buttonContacts.addEventListener("click", function () {
+        if (contacts.style.display === "none") {
+          contacts.style.display = "grid";
+        } else {
+          contacts.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
